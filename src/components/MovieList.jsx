@@ -27,15 +27,17 @@ function MovieList() {
     return (
         <div className="movielist">
             {movies.map((movie) => (
-                <li key={movie.id}>
-                    <div className="movie-image">
-                        <img
-                            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                            alt={movie.title}
-                        />
-                        <div className="movie-title">{movie.title}</div>
-                    </div>
-                </li>
+                <Link to={`/Detail/${movie.id}`}>
+                    <li key={movie.id}>
+                        <div className="movie-image">
+                            <img
+                                src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                                alt={movie.title}
+                            />
+                            <div className="movie-title">{movie.title}</div>
+                        </div>
+                    </li>
+                </Link>
             ))}
         </div>
     );

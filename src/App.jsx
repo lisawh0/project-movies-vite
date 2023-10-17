@@ -1,11 +1,19 @@
-import { MovieList } from "./components/MovieList.jsx";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MovieList } from "./components/MovieList";
 
 export const App = () => {
+
   return (
-    <div>
-      <MovieList />
-    </div>
+
+    <BrowserRouter>
+      <div className="main-wrapper">
+        <Routes >
+          <Route path="/" element={<MovieList />} />
+
+        </Routes>
+      </div>
+    </BrowserRouter>
+
   );
 };
-
-export default App;

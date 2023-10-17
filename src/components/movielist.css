@@ -11,8 +11,6 @@
     padding: 0;
 }
 
-/* MovieList.css */
-
 .movie-image:hover::before {
     content: '';
     position: absolute;
@@ -51,6 +49,7 @@
     padding: 15px;
     transition: opacity 0.3s;
     opacity: 0;
+    margin-bottom: 10px;
 }
 
 

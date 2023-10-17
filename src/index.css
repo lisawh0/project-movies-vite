@@ -12,9 +12,12 @@ code {
     monospace;
 }
 
+body {
+  background-color: black;
+}
+
 
 .main-wrapper {
-  background-color: black;
   width: 100vw;
   position: relative;
   max-width: 100vw;

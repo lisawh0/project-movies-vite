@@ -40,6 +40,7 @@
 
 .movie-title {
     position: absolute;
+    font-family: 'Montserrat', sans-serif;
     bottom: 0;
     left: 0;
     width: 100%;

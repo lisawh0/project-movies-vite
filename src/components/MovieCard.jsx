@@ -1,3 +1,5 @@
+import React from 'react';
+
 function MovieCard({ movie }) {
   return (
     <div className="movie-card">
@@ -6,6 +8,7 @@ function MovieCard({ movie }) {
         alt={movie.title}
       />
       <div className="movie-title">{movie.title}</div>
+
     </div>
   );
 }

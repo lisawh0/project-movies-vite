@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./movielist.css";
-import MovieCard from "./MovieCard";
+import MovieCard from './MovieCard';
 
 function MovieList() {
     const [movies, setMovies] = useState([]);

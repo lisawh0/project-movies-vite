@@ -10,6 +10,7 @@ export const App = () => {
       <div className="main-wrapper">
         <Routes >
           <Route path="/" element={<MovieList />} />
+
         </Routes>
       </div>
     </BrowserRouter>

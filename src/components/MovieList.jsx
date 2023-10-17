@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./movielist.css";
 
 function MovieList() {
@@ -29,10 +30,10 @@ function MovieList() {
             {movies.map((movie) => (
                 <li key={movie.id}>
 
-                    <img
+                    <Link to="/MovieCard"><img
                         src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                         alt={movie.title}
-                    />
+                    /></Link>
 
                 </li>
 

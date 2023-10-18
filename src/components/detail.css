@@ -27,7 +27,6 @@
   left: 0;
   width: 100%;
   height: 250px;
-  /* Adjust the height as needed */
   background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5424763655462185) 50%, rgba(0, 0, 0, 0) 100%);
   z-index: 0;
 }
@@ -55,6 +54,7 @@
   font-family: 'Montserrat', sans-serif;
   text-shadow: 1px 1px black;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .title-rating h3 {
@@ -63,12 +63,27 @@
   background-color: white;
   padding: 5px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
-.p {
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.back-button {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  text-align: left;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  border: black;
+  background-color: transparent;
+  cursor: pointer;
+  width: 8%;
 }
+
 
 
 @media only screen and (max-width: 768px) {

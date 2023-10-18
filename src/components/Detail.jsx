@@ -31,6 +31,7 @@ export const Detail = () => {
 
   return (
     <div>
+
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
@@ -47,10 +48,13 @@ export const Detail = () => {
             width: "100vw",
           }}
         >
+          <button className="back-button">⬅ Movies</button>
           {/* <img
             src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
             alt={movie.title}
           /> */}
+
+
           <div className="wrapper">
             <img
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}

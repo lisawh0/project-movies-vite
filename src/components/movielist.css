@@ -1,9 +1,12 @@
 .movielist {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-gap: 0px;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .movielist li {
@@ -54,7 +57,7 @@
     padding: 15px;
     transition: opacity 0.3s;
     opacity: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .release-date {

@@ -5,13 +5,15 @@ import { Detail } from "./components/Detail";
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <div className="main-wrapper">
+    <div className="main-wrapper">
+      <BrowserRouter>
+
         <Routes>
           <Route path="/" element={<MovieList />} />
           <Route path="/movie/:id" element={<Detail />} />
         </Routes>
-      </div>
-    </BrowserRouter>
+
+      </BrowserRouter>
+    </div>
   );
 };

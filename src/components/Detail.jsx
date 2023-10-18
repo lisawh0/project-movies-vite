@@ -65,8 +65,9 @@ export const Detail = () => {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "./detail.css";
 
 export const Detail = () => {
   const [loading, setLoading] = useState(true);
@@ -41,9 +42,13 @@ export const Detail = () => {
             src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
             alt={movie.title}
           />
-          <h2>{movie.title}</h2>
-          <h3>{movie.overview}</h3>
-          <h3>{movie.vote_average}</h3>
+          <div className="movie-detail">
+            <div className="title-rating">
+              <h2>{movie.title}</h2>
+              <h3>{movie.vote_average}</h3>
+            </div>
+            <p>{movie.overview}</p>
+          </div>
         </div>
       )}
     </div>

@@ -81,3 +81,12 @@
     opacity: 1;
     /* Show the title on hover */
 }
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .movielist {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-gap: 0px;
+    }
+}

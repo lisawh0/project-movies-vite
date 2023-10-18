@@ -8,7 +8,7 @@ const routes = () => {
       <div className="main-wrapper">
         <Routes>
           <Route path="/" element={<MovieList />} />
-          <Route path="/movie/:movieTitle" element={<Detail />} />
+          <Route path="/movie/:id" element={<Detail />} />
         </Routes>
       </div>
     </BrowserRouter>

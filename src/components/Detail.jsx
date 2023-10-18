@@ -7,7 +7,6 @@ export const Detail = () => {
   const [error, setError] = useState(null);
   const [movie, setMovie] = useState({});
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     const apiKey = "113ea8a560a67d49a46e9d4001651148";
@@ -37,17 +36,33 @@ export const Detail = () => {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <div>
-          <img
+        <div
+          className="movie-detail"
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${movie.backdrop_path})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            height: "100vh",
+            width: "100vw",
+          }}
+        >
+          {/* <img
             src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
             alt={movie.title}
-          />
-          <div className="movie-detail">
-            <div className="title-rating">
-              <h2>{movie.title}</h2>
-              <h3>{movie.vote_average}</h3>
+          /> */}
+          <div className="wrapper">
+            <img
+              src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+              alt={movie.title}
+            />
+            <div className="content-wrapper">
+              <div className="title-rating">
+                <h2>{movie.title}</h2>
+                <h3>⭐ {movie.vote_average.toFixed(1)}</h3>
+              </div>
+              <p>{movie.overview}</p>
             </div>
-            <p>{movie.overview}</p>
           </div>
         </div>
       )}

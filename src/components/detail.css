@@ -1,16 +1,41 @@
+.mask {
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, black 75%);
+  mask-image: linear-gradient(to top transparent 25%, black 75%);
+}
+
+.wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 60%;
+}
+
 .movie-detail {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin-left: 30px;
-  color: white;
+  text-align: justify;
+  padding: 50px;
+  color: rgb(255, 255, 255);
 }
 
+.wrapper img {
+  border: 5px solid white;
+}
+
+.content-wrapper {
+  margin-left: 30px;
+}
 .title-rating {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  margin-left: 0;
+  width: auto;
+}
+
+.title-rating h2 {
+  text-shadow: 1px 1px black;
 }
 
 .title-rating h3 {

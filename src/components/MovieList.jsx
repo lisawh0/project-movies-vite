@@ -27,14 +27,19 @@ function MovieList() {
   return (
     <div className="movielist">
       {movies.map((movie) => (
-        <li key={movie.id}>
+        <li key={movie.id}
+          title={movie.title}
+          release={movie.release_date}>
           <Link to={`/movie/${movie.id}`}>
             <div className="movie-image">
               <img
                 src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                 alt={movie.title}
               />
+
               <div className="movie-title">{movie.title}</div>
+              <div className="release-date">Released: {movie.release_date}</div>
+
             </div>
           </Link>
         </li>

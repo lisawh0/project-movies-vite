@@ -39,9 +39,7 @@
 .content-wrapper {
   margin-left: 30px;
   width: 100%;
-  /* Updated to 100% for responsiveness */
   max-width: 400px;
-  /* Set a max width to limit the width on larger screens */
 }
 
 
@@ -105,7 +103,7 @@ p {
 
 /* Mobile */
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 471px) {
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -165,4 +163,63 @@ p {
     margin-right: 10px;
   }
 
+}
+
+@media only screen and (min-width: 472px) and (max-width: 1024px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 0px;
+  }
+
+  .wrapper img {
+    width: 40%;
+  }
+
+  .movie-detail {
+    padding: 30px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 30px;
+    margin-right: 20px;
+    margin-left: 0px;
+  }
+
+  .back-button {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .back-button:hover {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .title-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .title-rating h2 {
+    font-size: 18px;
+    padding: 0px;
+  }
+
+  .title-rating h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-right: 10px;
+  }
 }

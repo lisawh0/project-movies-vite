@@ -84,7 +84,7 @@
 
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 471px) {
     .movielist {
         grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
         grid-gap: 0px;

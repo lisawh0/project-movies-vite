@@ -38,8 +38,12 @@
 
 .content-wrapper {
   margin-left: 30px;
-  width: 400px;
+  width: 100%;
+  /* Updated to 100% for responsiveness */
+  max-width: 400px;
+  /* Set a max width to limit the width on larger screens */
 }
+
 
 .title-rating {
   display: flex;
@@ -94,40 +98,71 @@ p {
   border: black;
   background-color: transparent;
   cursor: pointer;
-  width: 8%;
   margin-left: 4px;
+  width: 8%;
 }
 
 
+/* Mobile */
 
-@media only screen and (max-width: 768px) {
-  .wrapper img {
-    width: 40%;
-  }
-
+@media only screen and (max-width: 390px) {
   .wrapper {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 0px;
+  }
+
+  .wrapper img {
+    width: 70%;
+    margin-left: 50px;
+  }
+
+  .movie-detail {
+    padding: 30px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 0px;
+  }
+
+  .back-button {
+    font-size: 8px;
+    width: 45px;
+    height: 25px;
+  }
+
+  .back-button:hover {
+    font-size: 8px;
+    width: 40px;
+    height: 25px;
   }
 
   .title-rating {
     display: flex;
-    flex-wrap: wrap;
-    padding-top: 30px;
-  }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 768px) {
-  .wrapper {
-    align-items: center;
-    padding-top: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    margin-top: 30px;
+    width: 80%;
   }
 
-  .title-rating {
-    display: flex;
-    flex-wrap: wrap;
+  .title-rating h2 {
+    font-size: 18px;
+    padding: 0px;
   }
+
+  .title-rating h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
 }

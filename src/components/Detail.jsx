@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./detail.css";
 
@@ -7,6 +7,11 @@ export const Detail = () => {
   const [error, setError] = useState(null);
   const [movie, setMovie] = useState({});
   const { id } = useParams();
+  const navigate = useNavigate(); //for back-button
+
+  const handleButtonClick = () => {
+    navigate("/");
+  };
 
   useEffect(() => {
     const apiKey = "113ea8a560a67d49a46e9d4001651148";
@@ -31,7 +36,6 @@ export const Detail = () => {
 
   return (
     <div>
-
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
@@ -48,13 +52,7 @@ export const Detail = () => {
             width: "100vw",
           }}
         >
-          <button className="back-button">⬅ Movies</button>
-          {/* <img
-            src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
-            alt={movie.title}
-          /> */}
-
-
+          <button className="back-button" onClick={handleButtonClick}>⬅ Movies</button>
           <div className="wrapper">
             <img
               src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
@@ -69,10 +67,7 @@ export const Detail = () => {
             </div>
           </div>
         </div>
-      )
-      }
-    </div >
+      )}
+    </div>
   );
 };
-
-export default Detail;
